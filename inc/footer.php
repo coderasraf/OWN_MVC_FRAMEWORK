@@ -2,15 +2,13 @@
 
   <footer class="footeroption">
 	  <section class="footerone">
-	  <p>Delowar Jahan Imran</p>
-	  <p>Oracle Certified Professional,</p>
-	  <p>Java SE 6 Programmer</p>
+	  <p>Hass Asraf</p>
+	  <p>Expert Fullstack Web developer</p>
 	  
 	  </section>
 	  <section class="footerone">
-		  <p>Like us: facebook.com/ProDelowar</p>
-		  <p>Join us: facebook.com/groups/PBPTBD</p>
-		  <p>Web: www.trainingWithLiveProject.com</p>
+		  <p>Like us: facebook.com/hassasraf</p>
+		  <p>Web: www.hassasraf.netlify.app</p>
 	  </section>
   </footer>
 
