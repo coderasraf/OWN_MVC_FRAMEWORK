@@ -1,6 +1,11 @@
 <?php include "inc/header.php"; ?>
+<?php include "system/libs/Main.php"; ?>
 
+<?php 
 
+	$main = new Main();
+
+ ?>
 
 
 
