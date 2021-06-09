@@ -4,11 +4,11 @@
 	/**
 	 * 
 	 */
-	class Asraf extends DController{
+	class Test{
 		
 		function __construct()
 		{
-			parent::__construct();
+			echo "I am from Test controller";
 		}
 	}
 	
