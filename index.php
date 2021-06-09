@@ -1,13 +1,13 @@
 <?php include "inc/header.php"; ?>
 <?php include "system/libs/Main.php"; ?>
 <?php include "system/libs/DController.php"; ?>
+<?php include "system/libs/Load.php"; ?>
 <?php 
-
 	// Getting controller, method, param from url
 	$url = isset ($_GET['url']) ? $_GET['url'] : NULL;
 	if ($url != NULL) {
 		$url = rtrim($url, '/');
-		$url = explode('/', $url);
+		$url = explode('/', filter_var($url,FILTER_SANITIZE_URL));
 	}else{
 		unset($url);
 	}
@@ -22,12 +22,15 @@
 			$ctlr->$method($param);
 		}
 		else{
-			if (isset($method)) {
+			if (isset($url[1])) {
+				$method = $url[1];
 				$ctlr->$method();
 			}
 		}
 	}else{
-		echo "Defualt";
+		include "app/controllers/Index.php";
+		$welcome = new Index();
+		$welcome->home();
 	}
 
 
