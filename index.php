@@ -16,15 +16,13 @@
 	if (isset($url[0])){
 		include "app/controllers/$url[0].php";
 		$ctlr   = new $url[0]();
-		if (isset($url[2]) && isset($url[1])){
+		if (isset($url[2])){
 			$method = $url[1];
 			$param  = $url[2];
 			$ctlr->$method($param);
-		}
-		else{
-			if (isset($method)) {
-				$ctlr->$method();
-			}
+		}else{
+			$method = $url[1];
+			$ctlr->$method();
 		}
 	}else{
 		include "app/controllers/Index.php";

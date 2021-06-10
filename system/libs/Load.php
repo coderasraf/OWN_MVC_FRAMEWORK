@@ -5,7 +5,7 @@
 	 */
 	class Load{
 		// view
-		public function view($fileName){
+		public function view($fileName, $data = NULL){
 			include "app/views/$fileName".".php";
 		}
 
