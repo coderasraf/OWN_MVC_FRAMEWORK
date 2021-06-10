@@ -22,15 +22,14 @@
 			$ctlr->$method($param);
 		}
 		else{
-			if (isset($url[1])) {
-				$method = $url[1];
+			if (isset($method)) {
 				$ctlr->$method();
 			}
 		}
 	}else{
 		include "app/controllers/Index.php";
 		$welcome = new Index();
-		$welcome->home();
+		$welcome->category();
 	}
 
 
