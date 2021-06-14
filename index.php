@@ -1,7 +1,10 @@
 <?php include "inc/header.php"; ?>
-<?php include "system/libs/Main.php"; ?>
-<?php include "system/libs/DController.php"; ?>
-<?php include "system/libs/Load.php"; ?>
+<?php 
+	spl_autoload_register(function($className){
+		include "system/libs/$className.php";
+	});
+ ?>
+
 <?php 
 	// Getting controller, method, param from url
 	$url = isset ($_GET['url']) ? $_GET['url'] : NULL;
@@ -27,7 +30,6 @@
 	}else{
 		include "app/controllers/Index.php";
 		$welcome = new Index();
-		$welcome->category();
 	}
 
 
